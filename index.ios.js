@@ -10,15 +10,23 @@ var {
   StyleSheet,
   Text,
   View,
+  TouchableHighlight
 } = React;
 
 var IterateConf = React.createClass({
+
+  _textPressed: function() {
+      console.log('textPressed');
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
-        <Text style={styles.woop}>
-          Woop woop
-        </Text>
+          <TouchableHighlight onPress={this._textPressed} underlayColor="green">
+              <Text style={styles.woop}>
+                  Woop woop
+              </Text>
+          </TouchableHighlight>
       </View>
     );
   }
