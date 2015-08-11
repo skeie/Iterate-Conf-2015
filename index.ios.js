@@ -30,7 +30,7 @@ var IterateConf = React.createClass({
           </TouchableHighlight>
 
               <Image
-                  source={{uri: 'https://iterate.no/static/images/iterate.png'}}>
+                  source={require('image!iterate')}>
               </Image>
       </View>
     );
@@ -49,6 +49,7 @@ var styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+
 });
 
 AppRegistry.registerComponent('IterateConf', () => IterateConf);
