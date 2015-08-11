@@ -52,4 +52,7 @@ var styles = StyleSheet.create({
 
 });
 
+//trenger ikke størrelse
+//må bygge på nytt hvis man adder bilder
+
 AppRegistry.registerComponent('IterateConf', () => IterateConf);
