@@ -10,7 +10,8 @@ var {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight
+  TouchableHighlight,
+  Image
 } = React;
 
 var IterateConf = React.createClass({
@@ -27,6 +28,11 @@ var IterateConf = React.createClass({
                   Woop woop
               </Text>
           </TouchableHighlight>
+
+              <Image
+                  style={styles.image}
+                  source={{uri: 'https://iterate.no/static/images/iterate.png'}}>
+              </Image>
       </View>
     );
   }
@@ -37,12 +43,19 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#F5FCFF',
+    alignItems: 'center'
   },
   woop: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
+
+  image: {
+      width: 200,
+      height: 65,
+      textAlign: 'center'
+  }
 });
 
 AppRegistry.registerComponent('IterateConf', () => IterateConf);
