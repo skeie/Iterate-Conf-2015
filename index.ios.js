@@ -54,7 +54,6 @@ var styles = StyleSheet.create({
   image: {
       width: 200,
       height: 65,
-      textAlign: 'center'
   }
 });
 
