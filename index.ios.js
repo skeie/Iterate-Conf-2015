@@ -14,7 +14,8 @@ var {
   AppRegistry,
   StyleSheet,
   View,
-  Animated
+  Animated,
+  Image
 } = React;
 var PICTURE_HEIGHT = 30;
 var PICTURE_WIDTH = 100;
@@ -68,6 +69,9 @@ var IterateConf = React.createClass({
     return (
       <View style={styles.container}>
         <Animated.Image  source={require('image!iterate')} style={this.getStyle()} />
+        <View style={styles.imgContainer}>
+              <Image source={require('image!freddyBear')} style={styles.imgStyle}/>
+        </View>
       </View>
     );
   }
@@ -79,9 +83,19 @@ var styles = StyleSheet.create({
   square: {
     width: PICTURE_WIDTH,
     height: PICTURE_HEIGHT
+},
+
+  imgContainer: {
+      width: 100,
+      marginLeft: 150,
+      marginTop: 250
+  },
+
+  imgStyle : {
+      height: 100,
+      width: 100,
   }
 });
-//trenger ikke størrelse
-//må bygge på nytt hvis man adder bilder
+
 
 AppRegistry.registerComponent('IterateConf', () => IterateConf);
