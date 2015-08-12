@@ -13,15 +13,29 @@ var {
 } = React;
 
 var IterateConf = React.createClass({
-  render: function() {
-    return (
-      <View>
-        <Text>
-          WOOP WOOP
-        </Text>
-      </View>
-    );
-  }
-});
+    render: function() {
+      return (
+        <View style={styles.container}>
+            <Text style={styles.woop}>
+                Woop woop
+            </Text>
+        </View>
+      );
+    }
+  });
+
+  var styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      backgroundColor: '#F5FCFF',
+      alignItems: 'center'
+    },
+    woop: {
+      fontSize: 20,
+      textAlign: 'center',
+      margin: 10,
+    },
+  });
 
 AppRegistry.registerComponent('IterateConf', () => IterateConf);
